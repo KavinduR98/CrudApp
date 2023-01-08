@@ -14,7 +14,8 @@ class CityController extends Controller
      */
     public function index()
     {
-        return view('city.index');
+        $city = City::get();
+        return view('city.index')->with(compact('city'));
     }
 
     /**
@@ -42,7 +43,7 @@ class CityController extends Controller
 
         City::create($request->all());  
 
-        return view('city.index');
+        return redirect()->route('city.index')->with('add','Record Added');
     }
 
     /**
