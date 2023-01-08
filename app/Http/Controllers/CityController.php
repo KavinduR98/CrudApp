@@ -89,6 +89,7 @@ class CityController extends Controller
      */
     public function destroy(City $city)
     {
-        //
+        $city -> delete();
+        return redirect()->route('city.index')->with('add','Record Deleted');
     }
 }

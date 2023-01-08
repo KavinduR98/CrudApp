@@ -27,8 +27,13 @@
             <td>{{$data->code}}</td>
             <td>{{$data->name}}</td>
             <td>
-                <a class="btn btn-primary" href="{{route('city.edit',$data->id)}}">Edit</a>
-                <a class="btn btn-danger" href="#">Delete</a>
+                <form action="{{route('city.destroy',$data->id)}}" method="POST">
+                    <a class="btn btn-primary" href="{{route('city.edit',$data->id)}}">Edit</a>
+                
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger" type="submit">Delete</button>
+                </form>
             </td>
         </tr>
         @endforeach
