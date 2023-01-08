@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::resource('city',CityController::class);
+Route::resource('city',CityController::class);
