@@ -7,13 +7,14 @@
                 <h2>Add New Record</h2>
             </div>
             <div class="float-right" style="margin-top: 10px; margin-left: 1172px;">
-                <a href="#" class="btn btn-success">Back</a>
+                
             </div>
         </div>
     </div>
     <br>
 
-    <form action="" method="">
+    <form action="{{route('city.store')}}" method="POST">
+        @csrf
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
@@ -28,10 +29,12 @@
                 </div>
             </div>
         </div>
+        <br>
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                    <a href="{{route('city.index')}}" class="btn btn-primary">Back</a>
                 </div>
             </div>
         </div>

@@ -24,7 +24,7 @@ class CityController extends Controller
      */
     public function create()
     {
-        //
+        return view('city.create');
     }
 
     /**
@@ -35,7 +35,14 @@ class CityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'code' => 'required',
+            'name' => 'required'
+        ]);
+
+        City::create($request->all());  
+
+        return view('city.index');
     }
 
     /**

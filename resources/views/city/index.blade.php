@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="float-right" style="margin-top: 10px; margin-left: 1172px;">
-                <a href="#" class="btn btn-success">Add New City</a>
+                <a href="{{route('city.create')}}" class="btn btn-success">Add New City</a>
             </div>
         </div>
     </div>
